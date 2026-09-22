@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Enter an assignment deadline to see how much time remains and how urgent it is."
+    />
+    <title>Deadline Check | Assignment Countdown</title>
+    <link
+      rel="icon"
+      type="image/svg+xml"
+      href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%231b4d3e'/%3E%3Ccircle cx='32' cy='34' r='18' fill='none' stroke='%23f5f1e8' stroke-width='5'/%3E%3Cpath d='M32 34V22m0 12 9 6M24 10h16' stroke='%23f5f1e8' stroke-width='5' stroke-linecap='round'/%3E%3C/svg%3E"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&amp;family=DM+Mono:wght@500&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="page-shell">
+      <section class="intro" aria-labelledby="page-title">
+        <p class="eyebrow">DEADLINE CHECK</p>
+        <h1 id="page-title">Know exactly how much time is left.</h1>
+        <p class="intro-copy">
+          Enter an assignment and its deadline to get a clear, live countdown.
+        </p>
+      </section>
+
+      <section class="deadline-card" aria-label="Assignment deadline calculator">
+        <form id="deadline-form" novalidate>
+          <div class="field-group">
+            <label for="assignment-name">Assignment name <span>Optional</span></label>
+            <input
+              id="assignment-name"
+              name="assignmentName"
+              type="text"
+              maxlength="60"
+              placeholder="e.g. Interactive experience"
+              autocomplete="off"
+            />
+          </div>
+
+          <div class="field-group">
+            <label for="deadline">Deadline date and time</label>
+            <input id="deadline" name="deadline" type="datetime-local" required />
+            <p class="field-error" id="deadline-error" aria-live="polite"></p>
+          </div>
+
+          <button type="submit">Check time remaining <span aria-hidden="true">→</span></button>
+        </form>
+
+        <section id="result" class="result" data-state="empty" aria-live="polite">
+          <div class="result-heading result-content">
+            <div>
+              <p class="status-label" id="status-label">PLENTY OF TIME</p>
+              <h2 id="result-title">Time remaining</h2>
+            </div>
+            <div class="status-mark" aria-hidden="true"></div>
+          </div>
+
+          <div class="countdown result-content" id="countdown">
+            <div class="time-block">
+              <strong id="days">00</strong>
+              <span>Days</span>
+            </div>
+            <div class="time-block">
+              <strong id="hours">00</strong>
+              <span>Hours</span>
+            </div>
+            <div class="time-block">
+              <strong id="minutes">00</strong>
+              <span>Minutes</span>
+            </div>
+            <div class="time-block">
+              <strong id="seconds">00</strong>
+              <span>Seconds</span>
+            </div>
+          </div>
+
+          <p class="deadline-summary result-content" id="deadline-summary"></p>
+        </section>
+      </section>
+
+      <p class="privacy-note">Your deadline is calculated in this browser and is never uploaded.</p>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>
