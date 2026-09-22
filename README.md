@@ -1,38 +1,23 @@
 # Deadline Check
 
-Deadline Check is a small browser-based tool for students. A user enters an assignment name and deadline, and the page displays a live countdown with a color-coded urgency level.
+Deadline Check is a small tool for students. A user enters an assignment deadline, and the page shows a live countdown and a color-coded urgency level.
 
-> When someone selects an assignment deadline, the experience should show how much time remains and clearly indicate how urgent it is.
+> When someone selects an assignment deadline, the experience should show how much time remains and how urgent it is.
 
-## How to run it
+## How to run
 
-No installation is required.
+Download this repository and open `index.html` in a browser. Enter an assignment name and deadline, then select **Check time remaining**.
 
-1. Download or clone this repository.
-2. Open `index.html` in a web browser.
-3. Enter an optional assignment name and choose a deadline.
-4. Select **Check time remaining**.
+## AI use
 
-For a local development server, run `python3 -m http.server 4173` in the project folder and visit `http://localhost:4173`.
+I used OpenAI Codex to plan, code, and test the project. Selected prompts included:
 
-## AI tool and selected prompts
-
-I used OpenAI Codex to help plan, build, test, and revise the project. Some prompts and decisions that shaped the result were:
-
-- “你帮我想一个” (“Help me think of an idea.”)
-- “实用一点的” (“Make it more practical.”)
-- “改成英文版” (“Change it to an English version.”)
-
-The first suggestions were a breathing exercise and a short interactive story. I rejected those ideas because I wanted the result to be useful in everyday student life. That decision led to the assignment deadline countdown.
+- “Help me think of an idea.”
+- “Make it more practical.”
+- “Change it to an English version.”
 
 ## Reflection
 
-The main interaction matched my intention: after a user enters a deadline, the page immediately shows the remaining days, hours, minutes, and seconds. The urgency colors also make the result easier to understand at a glance. I tested a deadline more than a week away, one less than 24 hours away, a date in the past, and an empty input. During testing, I found that submitting an empty field left the previous countdown visible. That could make a user think the old result was still connected to the empty form, so I revised the code to clear the old countdown and show an error message instead. I also changed the interface from Chinese to English and checked it at both mobile and desktop widths.
+The main interaction matched my intention. The countdown updates every second, and its color makes the urgency easy to understand. I tested future deadlines, a past deadline, and an empty input. At first, an empty input left the previous result on screen, so I changed the code to clear that result and show an error message.
 
-AI helped turn the idea into HTML, CSS, and JavaScript, suggested useful edge cases, and helped diagnose the stale-result problem. I still had to decide what kind of experience I wanted, reject ideas that did not fit, choose a practical direction, and judge whether the results communicated urgency clearly. One unresolved limitation is that the browser controls the appearance and language of the built-in date picker, so it may follow the computer's regional settings even though the page is in English. The project also tracks only one assignment at a time; supporting a saved list of assignments would require a larger version of the project.
-
-## Files
-
-- `index.html` — page structure and content
-- `styles.css` — layout, responsive design, and urgency colors
-- `script.js` — countdown, validation, and status logic
+AI helped me create the HTML, CSS, and JavaScript and suggested useful test cases. I still decided which idea to use, what information mattered, and whether the result felt clear. One unresolved limitation is that the date picker may follow the browser's regional settings, and the tool only tracks one assignment at a time.
