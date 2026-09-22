@@ -3,7 +3,7 @@ Deadline Check is a small tool for students. A user enters an assignment deadlin
 
 > When someone selects an assignment deadline, the experience should show how much time remains and how urgent it is.
 
-How to run
+## How to run
 Enter an assignment name and deadline, then select **Check time remaining**.
 
 # AI use
