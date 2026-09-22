@@ -6,7 +6,7 @@ Deadline Check is a small tool for students. A user enters an assignment deadlin
 How to run
 Download this repository and open `index.html` in a browser. Enter an assignment name and deadline, then select **Check time remaining**.
 
-AI use
+# AI use
 
 I used Codex to help me code, and test the project. Selected prompts included:
 - “When someone tell you the deadline, the experience should tell them how much time they left.”
