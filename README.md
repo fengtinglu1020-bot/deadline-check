@@ -4,7 +4,7 @@ Deadline Check is a small tool for students. A user enters an assignment deadlin
 > When someone selects an assignment deadline, the experience should show how much time remains and how urgent it is.
 
 How to run
-Download this repository and open `index.html` in a browser. Enter an assignment name and deadline, then select **Check time remaining**.
+Enter an assignment name and deadline, then select **Check time remaining**.
 
 # AI use
 
@@ -12,7 +12,7 @@ I used Codex to help me code, and test the project. Selected prompts included:
 - “When someone tell you the deadline, the experience should tell them how much time they left.”
 - “Make it more practical.”
 
-## Reflection
+# Reflection
 
 The main interaction matched my intention. The countdown updates every second, and its color makes the urgency easy to understand. I tested future deadlines, a past deadline, and an empty input. At first, an empty input left the previous result on screen, so I changed the code to clear that result and show an error message.
 
