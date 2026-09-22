@@ -1,20 +1,16 @@
 # Deadline Check
-
 Deadline Check is a small tool for students. A user enters an assignment deadline, and the page shows a live countdown and a color-coded urgency level.
 
 > When someone selects an assignment deadline, the experience should show how much time remains and how urgent it is.
 
-## How to run
-
+How to run
 Download this repository and open `index.html` in a browser. Enter an assignment name and deadline, then select **Check time remaining**.
 
-## AI use
+AI use
 
-I used OpenAI Codex to plan, code, and test the project. Selected prompts included:
-
-- “Help me think of an idea.”
+I used Codex to help me code, and test the project. Selected prompts included:
+- “When someone tell you the deadline, the experience should tell them how much time they left.”
 - “Make it more practical.”
-- “Change it to an English version.”
 
 ## Reflection
 
